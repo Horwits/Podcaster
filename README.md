@@ -1,5 +1,5 @@
 # Podcaster
-is an online podcast-manager. It provides user - friendly managing tools for your podcast experience.
+is an online podcast manager. It provides user-friendly managing tools for your podcast experience.
 
 *This is a course project for [Telerik academy's Angular 2 course](https://github.com/TelerikAcademy/Angular-2).*
 
