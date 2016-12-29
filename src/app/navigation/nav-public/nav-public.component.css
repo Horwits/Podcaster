@@ -8,10 +8,13 @@
 }
 
 .navbar-brand{
-  color: transparent;
+  display: inline-block;
+  width: 143px;
+  height: 50px;
   background-image: url('../../../assets/images/logo.png');
-  background-size: contain;
+  background-size: 80% 80%;
   background-repeat: no-repeat;
+  background-position: center; 
 }
 
 .navbar-default .navbar-header {
