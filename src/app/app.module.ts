@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { MainNavModule } from './navigation/main-nav.module';
+import { HeaderModule } from './header/header.module';
 
 import { AppComponent } from './app.component';
 
@@ -13,10 +14,11 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
 
-    MainNavModule
+    MainNavModule,
+    HeaderModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
