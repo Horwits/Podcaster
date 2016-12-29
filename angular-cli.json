@@ -20,6 +20,8 @@
       "styles": [
         "../node_modules/tether/dist/css/tether.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/magnific-popup/dist/magnific-popup.css",
         "./assets/css/creative.css",
         "styles.css"
       ],
@@ -27,6 +29,8 @@
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/tether/dist/js/tether.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/scrollreveal/dist/scrollreveal.js",
+        "../node_modules/magnific-popup/dist/jquery.magnific-popup.js",
         "./assets/js/creative.js"
       ],
       "environments": {
