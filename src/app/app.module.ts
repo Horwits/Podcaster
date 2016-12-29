@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { MainNavModule } from './navigation/main-nav.module';
 import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,10 +16,11 @@ import { AppComponent } from './app.component';
     HttpModule,
 
     MainNavModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule
   ],
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
