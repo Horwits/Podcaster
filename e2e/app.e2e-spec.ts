@@ -1,10 +1,10 @@
-import { PodcasterAppPage } from './app.po';
+import { PodcasterPage } from './app.po';
 
-describe('podcaster-app App', function() {
-  let page: PodcasterAppPage;
+describe('podcaster App', function() {
+  let page: PodcasterPage;
 
   beforeEach(() => {
-    page = new PodcasterAppPage();
+    page = new PodcasterPage();
   });
 
   it('should display message saying app works', () => {
