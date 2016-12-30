@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict"; // Start of use strict
+    'use strict'; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function (event) {
@@ -17,15 +17,18 @@
     });
 
     $(document).ready(function () {
-        let topOfMain = $("#main-content").offset().top;
-
-        let scrollBottom = $(window).scrollTop() + $(window).height();
+        let topOfMain = $('#main-content').offset().top,
+        scrollBottom = $(window).scrollTop() + $(window).height(),
+        $nav = $('#mainNav'),
+        $navLis = $('.page-scroll');
 
         $(window).scroll(function () {
-            if ($(window).scrollTop() > topOfMain) { //scrolled past the other div?
-                $("#mainNav").css("background-color", "white");
+            if ($(window).scrollTop() > topOfMain) {
+                $nav.css('background-color', 'white');
+                $navLis.css('color', '#222');
             } else {
-                $("#mainNav").css("background-color", "");
+                $nav.css('background-color', '');
+                $navLis.css('color', '');
             }
         });
     });
@@ -71,7 +74,7 @@
             preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            tError: '<a href=' % url % '>The image #%curr%</a> could not be loaded.'
         }
     });
 

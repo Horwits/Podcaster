@@ -1,0 +1,11 @@
+.white-background{
+    background-color: white;
+}
+
+.page-scroll{
+    color: #222;
+}
+
+.page-scroll:hover{
+    color: #F05F40;
+}
