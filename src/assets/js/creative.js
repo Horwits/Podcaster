@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function(event) {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -16,8 +16,22 @@
         offset: 51
     });
 
+    $(document).ready(function () {
+        let topOfMain = $("#main-content").offset().top;
+
+        let scrollBottom = $(window).scrollTop() + $(window).height();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > topOfMain) { //scrolled past the other div?
+                $("#mainNav").css("background-color", "white");
+            } else {
+                $("#mainNav").css("background-color", "");
+            }
+        });
+    });
+
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-collapse ul li a').click(function () {
         $('.navbar-toggle:visible').click();
     });
 
