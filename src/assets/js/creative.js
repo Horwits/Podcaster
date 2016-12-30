@@ -18,14 +18,26 @@
 
     $(document).ready(function () {
         let topOfMain = $('#main-content').offset().top,
-        scrollBottom = $(window).scrollTop() + $(window).height(),
-        $nav = $('#mainNav'),
-        $navLis = $('.page-scroll');
+            scrollBottom = $(window).scrollTop() + $(window).height(),
+            $nav = $('#mainNav'),
+            $navLis = $('.page-scroll');
 
         $(window).scroll(function () {
             if ($(window).scrollTop() > topOfMain) {
                 $nav.css('background-color', 'white');
                 $navLis.css('color', '#222');
+                
+                const color = '#F05F40';
+                const colorClass = 'color-reddish';
+                $navLis.hover(function () {
+                    $(this).toggleClass(colorClass);
+
+                    if($(this).hasClass(colorClass)){
+                        $(this).css('color', color);
+                    }else{
+                        $(this).css('color', '#222');
+                    }
+                });
             } else {
                 $nav.css('background-color', '');
                 $navLis.css('color', '');

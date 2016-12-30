@@ -91,7 +91,8 @@
     color: #222222;
   }
   .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
+  .navbar-default.affix .nav > li > a:focus:hover 
+  {
     color: #F05F40;
   }
 }
