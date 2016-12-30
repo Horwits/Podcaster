@@ -1,5 +1,5 @@
 .navbar-default {
-  background-color: white;
+  background-color : rgb(255, 255, 250);
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
@@ -75,7 +75,7 @@
     color: white;
   }
   .navbar-default.affix {
-    background-color: white;
+    background-color : rgb(255, 255, 250);
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
