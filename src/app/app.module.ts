@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { MainNavModule } from './navigation/main-nav.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
+//import { SearchModule } from './search/search.module';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
 
     MainNavModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    //SearchModule
   ],
   declarations: [
     AppComponent
