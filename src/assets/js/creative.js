@@ -27,7 +27,7 @@
                 $nav.css('background-color', 'white');
                 $navLis.css('color', '#222');
 
-                const color = '#F05F40';
+                /*const color = '#F05F40';
                 const colorClass = 'color-reddish';
                 $navLis.hover(function () {
                     $(this).toggleClass(colorClass);
@@ -37,15 +37,15 @@
                     }else{
                         $(this).css('color', '#222');
                     }
-                });
+                });*/
             } else {
                 $nav.css('background-color', '');
                 $navLis.css('color', '');
                 $navLis.css('color', '');
 
-                $navLis.hover(function () {
+                /*$navLis.hover(function () {
                         $(this).css('color', '');
-                });
+                });*/
             }
         });
     });
