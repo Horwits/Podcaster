@@ -26,7 +26,7 @@
             if ($(window).scrollTop() > topOfMain) {
                 $nav.css('background-color', 'white');
                 $navLis.css('color', '#222');
-                
+
                 const color = '#F05F40';
                 const colorClass = 'color-reddish';
                 $navLis.hover(function () {
@@ -41,6 +41,11 @@
             } else {
                 $nav.css('background-color', '');
                 $navLis.css('color', '');
+                $navLis.css('color', '');
+
+                $navLis.hover(function () {
+                        $(this).css('color', '');
+                });
             }
         });
     });
