@@ -9,6 +9,7 @@ import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { SearchModule } from './search/search.module';
 import { QuestionModule } from './question/question.module';
+import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 
@@ -27,7 +28,8 @@ import { routing } from './routes/app.routing';
     HeaderModule,
     FooterModule,
     SearchModule,
-    QuestionModule
+    QuestionModule,
+    HomeModule
   ],
   declarations: [
     AppComponent,
