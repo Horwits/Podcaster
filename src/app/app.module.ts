@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
+
 
 import { MainNavModule } from './navigation/main-nav.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
-//import { SearchModule } from './search/search.module';
+import { SearchModule } from './search/search.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,11 +16,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
 
     MainNavModule,
     HeaderModule,
     FooterModule,
-    //SearchModule
+    SearchModule
   ],
   declarations: [
     AppComponent
