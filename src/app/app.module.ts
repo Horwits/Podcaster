@@ -5,7 +5,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 
 import { MainNavModule } from './navigation/main-nav.module';
-import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { SearchModule } from './search/search.module';
 import { QuestionModule } from './question/question.module';
@@ -25,7 +24,6 @@ import { routing } from './routes/app.routing';
     routing,
 
     MainNavModule,
-    HeaderModule,
     FooterModule,
     SearchModule,
     QuestionModule,
