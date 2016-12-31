@@ -52,10 +52,10 @@ p {
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
-section {
+section , header{
   padding: 100px 0;
 }
-aside {
+footer {
   padding: 50px 0;
 }
 .no-padding {
