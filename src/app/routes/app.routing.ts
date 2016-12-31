@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import our components
 import { SearchComponent } from '../search/search.component';
-
+import { QuestionsListComponent } from '../question/questions-list/questions-list.component';
 const appRoutes: Routes = [
     // Add the redirect
     /*{
@@ -14,6 +14,10 @@ const appRoutes: Routes = [
     {
         path: 'search',
         component: SearchComponent
+    },
+    {
+        path: 'questions',
+        component: QuestionsListComponent
     }
 ];
 

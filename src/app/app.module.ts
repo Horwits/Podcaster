@@ -8,6 +8,7 @@ import { MainNavModule } from './navigation/main-nav.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { SearchModule } from './search/search.module';
+import { QuestionModule } from './question/question.module';
 
 import { AppComponent } from './app.component';
 
@@ -25,10 +26,11 @@ import { routing } from './routes/app.routing';
     MainNavModule,
     HeaderModule,
     FooterModule,
-    SearchModule
+    SearchModule,
+    QuestionModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   bootstrap: [AppComponent]
 })
