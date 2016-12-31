@@ -11,12 +11,16 @@ import { SearchModule } from './search/search.module';
 
 import { AppComponent } from './app.component';
 
+import { routing } from './routes/app.routing';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     JsonpModule,
+
+    routing,
 
     MainNavModule,
     HeaderModule,
@@ -26,7 +30,6 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
