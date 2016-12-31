@@ -1,10 +1,10 @@
-import { Pipe } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
     name: 'truncate'
 })
 
-export class TruncateString {
+export class TruncateStringPipe implements PipeTransform {
     transform(value) {
         // Set the limit for the app title
         let limit = 30;

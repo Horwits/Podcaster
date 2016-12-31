@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { ItunesSearchService } from './search.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
-    moduleId: module.id,
-    selector: "search",
+    selector: "app-search",
     templateUrl: './search.component.html',
     styleUrls: ['./search.style.css']
 })
@@ -17,15 +17,18 @@ export class SearchComponent {
     }
     // Initiate search based on input value
     initSearch(value){
-            this.itunesService.getResults(value).then(result => {
-                 // Clear previous items
-                 this.items = null;
-                 this.message = null;
-                if(result.results.length > 0){
-                    this.items = result.results; 
-                } else{
-                    this.message = "No results for \"" + value + "\"";
-                }                 
+            this.itunesService.getResults(value).map(result => {
+                // Clear previous items
+                this.items = null;
+                this.message = null;
+            if(result.values.length > 0){
+                for (var item of result) {
+                    this.items = value;
+                }         
+            } 
+            else{
+                this.message = "No results for \"" + value + "\"";
+            }      
         }); 
     }
 }

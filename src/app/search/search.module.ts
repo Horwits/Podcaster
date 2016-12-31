@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchComponent } from './search.component';
-import { TruncateString } from './search.pipe';
+import {SearchComponent} from './search.component'
+import { TruncateStringPipe } from './search.pipe';
 
 @NgModule({
   imports: [
@@ -12,7 +12,8 @@ import { TruncateString } from './search.pipe';
   ],
   declarations: [
       SearchComponent,
-      TruncateString
+      TruncateStringPipe
   ]
 })
 export class SearchModule { }
+

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Jsonp } from '@angular/http';
-import 'rxjs/Rx';
+import { Http, Jsonp, Response } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class ItunesSearchService{
@@ -8,16 +8,28 @@ export class ItunesSearchService{
     constructor(public jsonp:Jsonp ){}
     
     // Itunes search, country = us, media = software, limit = 10
-    getResults(searchTerm){  
+    getResults(searchTerm): Observable<any[]>{  
         // Construct the itunes search url with callback
         let url = "https://itunes.apple.com/search?term=" + searchTerm + "&country=us&media=software&limit=10&callback=JSONP_CALLBACK";
-        return this.jsonp.request(url).map(res => {
-            return res.json();
-        }).toPromise();
-    }
-    
-    // log error to console
-    logError(error){
-        console.log("Something went wrong" + error);
+        return this.jsonp.get(url)
+        .map(function(res: Response){
+            return res.json() || {};
+        }).catch(function(error: any){return Observable.throw(error);
+        });
     }
 }
+
+/*export class AppComponent {
+  constructor(jsonp:Jsonp) {
+    var url = 'https://accounts.google.com/logout&c=JSONP_CALLBACK';
+    jsonp.request(url, { method: 'Get' })
+     .subscribe((res) => {
+       (...)
+     });
+  }
+}*/
+/*
+// inside your service
+this._jsonp.get('/api/get?callback=JSONP_CALLBACK').map(data => {
+// Do stuff.
+});*/

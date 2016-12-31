@@ -1,7 +1,7 @@
 input:focus{
     outline:none; 
 }
-.search-form{
+.app-search-form{
     padding-left: 20px;
 }
 .mdl-card__title{
