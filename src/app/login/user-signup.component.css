@@ -1,0 +1,18 @@
+.mdl-layout {
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-validation-error {
+    font-size: 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 100%;
+    margin: 0;
+    color: #aa2020;
+    position: absolute;
+    margin-top: 3px;
+    line-height: 18px;
+    display: block;
+}
