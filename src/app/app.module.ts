@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
-
-import { MainNavModule } from './navigation/main-nav.module';
-import { FooterModule } from './footer/footer.module';
-import { SearchModule } from './search/search.module';
-import { QuestionModule } from './question/question.module';
-import { HomeModule } from './home/home.module';
+import { MainNavModule } from './public/navigation/main-nav.module';
+import { FooterModule } from './public/footer/footer.module';
+import { SearchModule } from './public/search/search.module';
+import { QuestionModule } from './public/question/question.module';
+import { HomeModule } from './public/home/home.module';
 
 import { AppComponent } from './app.component';
 

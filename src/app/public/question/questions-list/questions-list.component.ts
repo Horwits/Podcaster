@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Question } from '../../core/models/question.model';
+import { Question } from '../../../core/models/question.model';
 
 @Component({
   selector: 'app-questions-list',

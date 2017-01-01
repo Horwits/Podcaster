@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Import our components
-import { SearchComponent } from '../search/search.component';
-import { QuestionsListComponent } from '../question/questions-list/questions-list.component';
-import { HomeMainComponent } from '../home/home-main/home-main.component';
+import { SearchComponent } from '../public/search/search.component';
+import { QuestionsListComponent } from '../public/question/questions-list/questions-list.component';
+import { HomeMainComponent } from '../public/home/home-main/home-main.component';
+
+import { AuthService } from '../core/services/auth.service';
+import { AuthGuard } from '../core/services/auth-guard.service';
 
 const appRoutes: Routes = [
     // Add the redirect
