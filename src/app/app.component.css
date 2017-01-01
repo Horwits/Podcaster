@@ -1,8 +1,17 @@
 #root {
     width: 100%;
     height: 100%;
-    background-image: url('../assets/images/itunes-on-iphone-podcast-headphones-241-1024x577.png');
+    padding: 0;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: 736px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center; 
+    -o-background-size: 100% 100%;
+    background-image: url('../assets/images/itunes-on-iphone-podcast-headphones-241-1024x577.png');
+    background-position: center;
 }

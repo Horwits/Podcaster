@@ -1,42 +1,42 @@
-div {
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
+#header {
   text-align: center;
   color: white;
 }
-div .header-content {
+
+
+#header .header-content {
   position: relative;
   text-align: center;
   padding: 100px 15px 100px;
   width: 100%;
 }
-div .header-content .header-content-inner h1 {
+#header .header-content .header-content-inner h1 {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
 }
-div .header-content .header-content-inner hr, img {
+#header .header-content .header-content-inner hr, img {
   margin: 30px auto;
 }
-div .header-content .header-content-inner p {
+
+#header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   margin-bottom: 50px;
 }
+
+.header-content-inner {
+  padding: 10px; 
+}
+
 @media (min-width: 768px) {
-  div {
+  #header {
     min-height: 100%;
   }
-  div .header-content {
+  #header .header-content {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -44,15 +44,15 @@ div .header-content .header-content-inner p {
     transform: translateY(-50%);
     padding: 0 50px;
   }
-  div .header-content .header-content-inner {
+  #header .header-content .header-content-inner {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
-  div .header-content .header-content-inner h1 {
+  #header .header-content .header-content-inner h1 {
     font-size: 50px;
   }
-  div .header-content .header-content-inner p {
+  #header .header-content .header-content-inner p {
     font-size: 18px;
     max-width: 80%;
     margin-left: auto;

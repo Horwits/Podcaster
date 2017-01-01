@@ -24,10 +24,10 @@ import { routing } from './routes/app.routing';
     routing,
 
     MainNavModule,
+    HomeModule,
     FooterModule,
     SearchModule,
     QuestionModule,
-    HomeModule
   ],
   declarations: [
     AppComponent,
