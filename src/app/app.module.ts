@@ -12,7 +12,7 @@ import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 
-import { routing } from './routes/app.routing';
+import { AppRoutingModule } from './routes/app-routing.module';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { routing } from './routes/app.routing';
     HttpModule,
     JsonpModule,
 
-    routing,
+    AppRoutingModule,
 
     MainNavModule,
     HomeModule,
