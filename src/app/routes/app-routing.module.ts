@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SearchComponent } from '../public/search/search.component';
 import { QuestionsListComponent } from '../public/question/questions-list/questions-list.component';
 import { HomeMainComponent } from '../public/home/home-main/home-main.component';
-import { UserSignupComponent } from '../login/user-signup.component';
+import { SignupComponent } from '../signup/signup.component';
 
 import { AuthService } from '../core/services/auth.service';
 import { AuthGuard } from '../core/services/auth-guard.service';
@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'signup',
-        component: UserSignupComponent
+        component: SignupComponent
     }
 ];
 

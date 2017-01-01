@@ -3,10 +3,10 @@ import { User } from '../core/models/user.model';
 
 @Component({
     selector: 'app-signup',
-    templateUrl: './user-signup.component.html',
-    styleUrls: ['./user-signup.component.css']
+    templateUrl: './signup.component.html',
+    styleUrls: ['./signup.component.css']
 })
-export class UserSignupComponent implements OnInit {
+export class SignupComponent implements OnInit {
     model: User;
     loading = false;
     returnUrl: string;

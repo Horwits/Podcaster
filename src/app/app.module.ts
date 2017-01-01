@@ -1,4 +1,4 @@
-import { LoginModule } from './login/login.module';
+import { SignupModule } from './signup/signup.module';
 import { AuthGuard } from './core/services/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -29,7 +29,7 @@ import { AppRoutingModule } from './routes/app-routing.module';
     FooterModule,
     SearchModule,
     QuestionModule,
-    LoginModule
+    SignupModule
   ],
   declarations: [
     AppComponent,
