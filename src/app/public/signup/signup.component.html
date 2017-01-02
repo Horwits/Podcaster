@@ -1,60 +1,58 @@
 <section>
-<p>Sign up works</p>
-</section>
+  <div class="row zoomInDown">
+    <div class="col-md-6 col-md-offset-3">
+      <div id="reg-panel" class="card">
+        <div class="card-title text-center">
+          <h1>Register</h1>
+          <hr>
+        </div>
+        <div class="card-content">
+          <form [formGroup]="form" (ngSubmit)="submit(form.value);">
+            <span class="text-danger small" *ngIf="!form.controls['username'].valid && form.controls['username'].touched">Username has to be betweeen 6 and 15 symbols.</span>
+            <input class="form-control" [class.input-error]="!form.controls['username'].valid && form.controls['username'].touched" type="text"
+              name="username" [formControl]="form.controls['username']" placeholder="Username" required>
 
-<!--<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-	<main class="mdl-layout__content">
-		<div class="mdl-card mdl-shadow--6dp">
-			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-				<h2 class="mdl-card__title-text">SIGN UP</h2>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<form name="form" (ngSubmit)="f.form.valid && signup()" #f="ngForm" novalidate>
-					<div class="mdl-textfield mdl-js-textfield form-group" [ngClass]="{ 'has-error': !fName.valid }">
-						<input class="mdl-textfield__input form-control" type="text" id="fName" name="firstName" [(ngModel)]="model.firstName"
-							#fName="ngModel" minlength="2" />
-						<label class="mdl-textfield__label" for="fName">First name</label>
-						<div *ngIf="!fName.valid && fName.touched"><span class="mdl-textfield__error">Please, enter at least 2 characters!</span></div>
-					</div>
-					<div class="mdl-textfield mdl-js-textfield form-group" [ngClass]="{ 'has-error': !lName.valid }">
-						<input class="mdl-textfield__input form-control" type="text" id="lName" name="lastName" [(ngModel)]="model.lastName"
-							#lName="ngModel" minlength="2" />
-						<label class="mdl-textfield__label" for="lName">Last name</label>
-						<div *ngIf="!lName.valid && lName.touched"><span class="mdl-textfield__error">Please, enter at least 2 characters!</span></div>
-					</div>
-					<div class="mdl-textfield mdl-js-textfield form-group" [ngClass]="{ 'has-error': !username.valid }">
-						<input class="mdl-textfield__input form-control" type="text" id="username" name="username" [(ngModel)]="model.username"
-							#username="ngModel" required />
-						<label class="mdl-textfield__label" for="username">Username</label>
-						<div *ngIf="!username.valid && username.touched"><span class="mdl-textfield__error">Username is required!</span></div>
-					</div>
-					<div class="mdl-textfield mdl-js-textfield form-group" [ngClass]="{ 'has-error': !password.valid }" >
-						<input class="mdl-textfield__input form-control" id="userpass" type="password" name="password" [(ngModel)]="model.password"
-							#password="ngModel" required validateEqual="confirmPassword" reverse="true" />
-						<label class="mdl-textfield__label" for="userpass">Password</label>
-						<div *ngIf="!password.valid && password.touched"><span class="mdl-textfield__error">Password is required!</span></div>
-					</div>
-					<div class="mdl-textfield mdl-js-textfield form-group" validateEqual="password" [ngClass]="{ 'has-error': !confirmPassword.valid }" >
-						<input class="mdl-textfield__input form-control" id="confirmPassword" type="password" name="confirmPassword" [(ngModel)]="model.confirmPassword"
-							#confirmPassword="ngModel" required validateEqual="password" />
-						<label class="mdl-textfield__label" for="confirmPassword">Confirm password</label>
-						<div *ngIf="!confirmPassword.valid">
-							<span class="custom-validation-error" [style.visibility]="!confirmPassword.valid && confirmPassword.touched ? 'visible' : 'hidden'">Password doesn't' match!</span>
-						</div>
-					</div>
-					<div class="mdl-textfield mdl-js-textfield form-group" [ngClass]="{ 'has-error': !email.valid }">
-						<input class="mdl-textfield__input form-control" type="email" id="email" name="email" [(ngModel)]="model.email"
-							#email="ngModel" required pattern="[a-zA-Z0–9_.-]+@[a-zA-Z0–9-]+.[a-zA-Z0–9.-]+" />
-						<label class="mdl-textfield__label" for="email">Email</label>
-						<div *ngIf="!email.valid && email.touched"><span class="mdl-textfield__error">Email is required in format: <i>john@doe.com</i>.</span></div>
-					</div>
-					<div class="mdl-card__actions mdl-card--border form-group">
-						<div *ngIf="loading" class="mdl-spinner mdl-js-spinner is-active"></div>
-						<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" [disabled]="loading || !f.form.valid">Sign Up</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</main>
-</div>
--->
+            <span class="text-danger small" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">Password has to be betweeen 6 and 15 symbols.</span>
+            <input class="form-control" type="password" name="password" [formControl]="form.controls['password']" placeholder="Password"
+              [class.input-error]="!form.controls['password'].valid && form.controls['password'].touched" validateEqual="confirmPassword"
+              reverse="true" required>
+
+            <span class="text-danger small" *ngIf="!form.controls['confirmPassword'].valid && form.controls['confirmPassword'].touched">Passwords don't match.</span>
+            <input class="form-control" type="password" name="confirmPassword" [formControl]="form.controls['confirmPassword']" placeholder="Confirm password."
+              [class.input-error]="!form.controls['confirmPassword'].valid && form.controls['confirmPassword'].touched" validateEqual="password"
+              required>
+
+            <span class="text-danger small" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">Invald e-mail.</span>
+            <input class="form-control" type="email" name="email" [formControl]="form.controls['email']" placeholder="E-Mail" [class.input-error]="!form.controls['email'].valid && form.controls['email'].touched"
+              required>
+
+            <span class="text-danger small" *ngIf="!form.controls['firstName'].valid && form.controls['firstName'].touched">First name has to be betweeen 3 and 20 symbols.</span>
+            <input class="form-control" type="text" name="firstName" [formControl]="form.controls['firstName']" placeholder="First name"
+              [class.input-error]="!form.controls['firstName'].valid && form.controls['firstName'].touched" required>
+
+            <span class="text-danger small" *ngIf="!form.controls['lastName'].valid && form.controls['lastName'].touched">Last name has to be betweeen 3 and 20 symbols.</span>
+            <input class="form-control" type="text" name="lastName" [formControl]="form.controls['lastName']" placeholder="Last name"
+              [class.input-error]="!form.controls['lastName'].valid && form.controls['lastName'].touched" required>
+
+            <span class="text-danger small" *ngIf="!form.controls['age'].valid && form.controls['age'].touched">You have not entered age.<br></span>
+            <input class="form-control" type="number" name="age" [formControl]="form.controls['age']" placeholder="Age" [class.input-error]="!form.controls['age'].valid && form.controls['age'].touched"
+              required>
+
+            <span class="text-danger small" *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched">You have not entered gender.<br></span>
+            <label id="gender-label" for="gender">Gender</label>
+            <select id="gender-select" class="form-control" [formControl]="form.controls['gender']" name="gender" [class.input-error]="!form.controls['gender'].valid && form.controls['gender'].touched">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unspecified">Other</option>    
+          </select>
+            <hr>
+            <button type="submit" class="btn btn-block orange">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="onGetUser()" class="btn btn-block orange">Get</button>
+  <div>{{response}}</div>
+</section>

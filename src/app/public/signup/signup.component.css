@@ -1,4 +1,14 @@
-.mdl-layout {
+input{
+    border-radius:0; 
+    height: 50px;
+}
+
+h1{
+    color: darkgray;
+    font-weight: bold;
+}
+
+/*.mdl-layout {
     align-items: center;
     justify-content: center;
 }
@@ -15,4 +25,4 @@
     margin-top: 3px;
     line-height: 18px;
     display: block;
-}
+}*/
