@@ -1,7 +1,8 @@
 import { Podcast } from '../../core/models/podcast.model';
-import { SearchService } from '../search/search.service';
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+
+import { HttpService } from '../../core/services/http.service';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -18,7 +19,7 @@ export class TopEightComponent implements OnInit {
   private url = 'https://itunes.apple.com/us/rss/toppodcasts/limit=8/explicit=true/json';
   searchTerm: string;
 
-  constructor(private http: Http, private searchService: SearchService) {
+  constructor(private http: Http, private searchService: HttpService) {
   }
   // Initiate search based on input value
   ngOnInit() {

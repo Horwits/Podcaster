@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { SearchService } from './search.service';
 import { Observable } from 'rxjs/Observable';
+
+import { HttpService } from '../../core/services/http.service';
 
 @Component({
     selector: 'app-search',
@@ -18,7 +19,7 @@ export class SearchComponent implements OnInit {
     private url = 'https://itunes.apple.com/us/rss/toppodcasts/limit=10/explicit=true/json';
     searchTerm: string;
 
-    constructor(private http: Http, private itunesService: SearchService) {
+    constructor(private http: Http, private itunesService: HttpService) {
     }
     // Initiate search based on input value
     ngOnInit() {

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PodcastComponent } from './podcast.component';
-import { SearchService } from '../search/search.service';
+
+import { HttpService } from '../../core/services/http.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [PodcastComponent],
-  providers: [SearchService]
+  providers: [HttpService]
 })
 export class PodcastModule { }
