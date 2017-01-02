@@ -14,7 +14,12 @@ export class FirebaseService {
         return this.http.post(this.dbUrl + '/users.json', body).map(response => response.json());
     }
 
-    getUser() {
+    getUsers() {
         return this.http.get(this.dbUrl + '/users.json').map(response => response.json());
+    }
+
+    getByUserName(userName: string) {
+        return this.http.get(this.dbUrl + '/users.json')
+            .map(response => response.json());
     }
 }

@@ -13,14 +13,24 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-  onGetUser() {
-    this.firebaseService.getUser()
+  ongetUsers() {
+    this.firebaseService.getUsers()
       .subscribe(
       user => {
         this.response = JSON.stringify(user);
-        console.log(this.response);
       },
       error => console.log(error)
       );
   }
+
+  onGetUserByUserName(userName) {
+    this.firebaseService.getByUserName(userName)
+      .subscribe(users => {
+        console.log(users as Array<Object>);
+        /*let user = users(x => x.userName === userName);
+        console.log(user);*/  
+    },
+  error => console.log(error)
+      );
+}
 }
