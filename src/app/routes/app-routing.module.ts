@@ -8,7 +8,7 @@ import { QuestionsListComponent } from '../public/question/questions-list/questi
 import { HomeMainComponent } from '../public/home/home-main/home-main.component';
 import { SignupComponent } from '../public/signup/signup.component';
 import { AboutComponent } from '../public/footer/footer-about/about.component';
-
+import { LoginComponent } from '../public/login/login.component';
 import { AuthService } from '../core/services/auth.service';
 import { AuthGuard } from '../core/services/auth-guard.service';
 
@@ -39,6 +39,10 @@ const appRoutes: Routes = [
     {
         path: 'signup',
         component: SignupComponent
+    },
+     {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: 'about',
