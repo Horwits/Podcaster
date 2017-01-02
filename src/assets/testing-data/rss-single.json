@@ -1,0 +1,80 @@
+{
+    "im:name": {
+        "label": "This American Life"
+    },
+    "im:image": [
+        {
+            "label": "http://is1.mzstatic.com/image/thumb/Podcasts62/v4/04/3b/d1/043bd17e-445e-f1c7-5e36-e39779b11800/mza_5001240433156561387.jpg/55x55bb-85.jpg",
+            "attributes": {
+                "height": "55"
+            }
+        },
+        {
+            "label": "http://is2.mzstatic.com/image/thumb/Podcasts62/v4/04/3b/d1/043bd17e-445e-f1c7-5e36-e39779b11800/mza_5001240433156561387.jpg/60x60bb-85.jpg",
+            "attributes": {
+                "height": "60"
+            }
+        },
+        {
+            "label": "http://is2.mzstatic.com/image/thumb/Podcasts62/v4/04/3b/d1/043bd17e-445e-f1c7-5e36-e39779b11800/mza_5001240433156561387.jpg/170x170bb-85.jpg",
+            "attributes": {
+                "height": "170"
+            }
+        }
+    ],
+    "summary": {
+        "label": "This American Life is a weekly public radio show, heard by 2.2 million people on more than 500 stations. Another 1.5 million people download the weekly podcast. It is hosted by Ira Glass, produced in collaboration with Chicago Public Media, delivered to stations by PRX The Public Radio Exchange, and has won all of the major broadcasting awards."
+    },
+    "im:price": {
+        "label": "Get",
+        "attributes": {
+            "amount": "0",
+            "currency": "USD"
+        }
+    },
+    "im:contentType": {
+        "attributes": {
+            "term": "Podcast",
+            "label": "Podcast"
+        }
+    },
+    "rights": {
+        "label": "© Copyright 1995-2016 Ira Glass"
+    },
+    "title": {
+        "label": "This American Life - This American Life"
+    },
+    "link": {
+        "attributes": {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "https://itunes.apple.com/us/podcast/this-american-life/id201671138?mt=2&uo=2"
+        }
+    },
+    "id": {
+        "label": "https://itunes.apple.com/us/podcast/this-american-life/id201671138?mt=2&uo=2",
+        "attributes": {
+            "im:id": "201671138"
+        }
+    },
+    "im:artist": {
+        "label": "This American Life",
+        "attributes": {
+            "href": "https://itunes.apple.com/us/artist/wbez/id364380278?mt=2&uo=2"
+        }
+    },
+    "category": {
+        "attributes": {
+            "im:id": "1302",
+            "term": "Personal Journals",
+            "scheme": "https://itunes.apple.com/us/genre/podcasts-personal-journals/id1302?mt=2&uo=2",
+            "label": "Personal Journals"
+        }
+    },
+    "im:releaseDate": {
+        "label": "2017-01-01T16:00:00-07:00",
+        "attributes": {
+            "label": "January 1, 2017"
+        }
+    }
+}
