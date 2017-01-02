@@ -7,6 +7,6 @@ export class User {
     firstName?: string;
     lastName?: string;
     description?: string;
-    subscription: array<string>;
-    downloads: array<Object>
+    subscriptions: Array<string>;
+    downloads: Array<Object>;
 };
