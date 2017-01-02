@@ -1,3 +1,4 @@
+import { TopEightComponent } from '../public/top-eight-podcasts/top-eight.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
     // Add our routes
+    {
+        path: 'top-eight',
+        component: TopEightComponent
+    },
     {
         path: 'search',
         component: SearchComponent
