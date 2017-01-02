@@ -56,21 +56,5 @@ export class SignupComponent implements OnInit {
 				console.log(err);
 			});
 	}*/}
-
-    onGetUser() {
-        this.firebaseService.getUser()
-            .subscribe(
-            user => {
-                this.response = JSON.stringify(user);
-                console.log(this.response);
-        },
-            error => console.log(error)
-            );
-
-        /*onSubmit(form: FormControl) {
-            console.log(this.user.firstName + ' ' + this.user.firstName);
-            /**/
-    }
-
 }
 
