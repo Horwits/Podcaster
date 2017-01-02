@@ -1,0 +1,65 @@
+{
+"userCount": 5,
+    "userData": [
+        {
+            "id": "1",
+            "username": "Mimi",
+            "password": "123456",
+            "confirmPassword": "123456",
+            "email": "asd@gmail.com",
+            "firstName": "Maria",
+            "lastName": "Koleva",
+            "description": "A pretty girl",
+            "subscription": "Rock * Jazz",
+            "downloads": "Imagine Nation * Chris Nelson"
+        },
+        {
+            "id": "2",
+            "username": "Ivo",
+            "password": "123456",
+            "confirmPassword": "123456",
+            "email": "fgh@gmail.com",
+            "firstName": "Ivaylo",
+            "lastName": "Petrov",
+            "description": "A handsome boy",
+            "subscription": "Rap * Latino",
+            "downloads": "blabla * Chris Nelson"
+        },
+                {
+            "id": "3",
+            "username": "Koko",
+            "password": "123456",
+            "confirmPassword": "123456",
+            "email": "hjk@gmail.com",
+            "firstName": "Nikolay",
+            "lastName": "Kolev",
+            "description": "another boy",
+            "subscription": "Rock * Jazz",
+            "downloads": "Imagine Nation * Chris Nelson"
+        },
+                {
+            "id": "4",
+            "username": "Lala",
+            "password": "123456",
+            "confirmPassword": "123456",
+            "email": "gvhjk@gmail.com",
+            "firstName": "Lala",
+            "lastName": "Koleva",
+            "description": "Another pretty girl",
+            "subscription": "Folk * Cinema",
+            "downloads": "Imagine Nation * Chris Nelson"
+        },
+                {
+            "id": "5",
+            "username": "Gosho",
+            "password": "123456",
+            "confirmPassword": "123456",
+            "email": "oknbvfd@gmail.com",
+            "firstName": "Marin",
+            "lastName": "Kolev",
+            "description": "A boy",
+            "subscription": "IT * Jazz",
+            "downloads": "C# * Chris Nelson"
+        }
+    ]
+}

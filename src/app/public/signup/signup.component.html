@@ -1,55 +1,17 @@
-<section>
-  <div class="row zoomInDown">
-    <div class="col-md-6 col-md-offset-3">
-      <div id="reg-panel" class="card">
-        <div class="card-title text-center">
-          <h1>Register</h1>
-          <hr>
+<!-- <section>
+<p>Sign up works</p>
+</section> -->
+
+<<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 text-left">
+                <p>sdfghj</p>
+				<p>fgfhklj</p>
+				<p>Team Directive4</p>
+            </div>
+
         </div>
-        <div class="card-content">
-          <form [formGroup]="form" (ngSubmit)="submit(form.value);">
-            <span class="text-danger small" *ngIf="!form.controls['username'].valid && form.controls['username'].touched">Username has to be betweeen 6 and 15 symbols.</span>
-            <input class="form-control" [class.input-error]="!form.controls['username'].valid && form.controls['username'].touched" type="text"
-              name="username" [formControl]="form.controls['username']" placeholder="Username" required>
 
-            <span class="text-danger small" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">Password has to be betweeen 6 and 15 symbols.</span>
-            <input class="form-control" type="password" name="password" [formControl]="form.controls['password']" placeholder="Password"
-              [class.input-error]="!form.controls['password'].valid && form.controls['password'].touched" validateEqual="confirmPassword"
-              reverse="true" required>
-
-            <span class="text-danger small" *ngIf="!form.controls['confirmPassword'].valid && form.controls['confirmPassword'].touched">Passwords don't match.</span>
-            <input class="form-control" type="password" name="confirmPassword" [formControl]="form.controls['confirmPassword']" placeholder="Confirm password."
-              [class.input-error]="!form.controls['confirmPassword'].valid && form.controls['confirmPassword'].touched" validateEqual="password"
-              required>
-
-            <span class="text-danger small" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">Invald e-mail.</span>
-            <input class="form-control" type="email" name="email" [formControl]="form.controls['email']" placeholder="E-Mail" [class.input-error]="!form.controls['email'].valid && form.controls['email'].touched"
-              required>
-
-            <span class="text-danger small" *ngIf="!form.controls['firstName'].valid && form.controls['firstName'].touched">First name has to be betweeen 3 and 20 symbols.</span>
-            <input class="form-control" type="text" name="firstName" [formControl]="form.controls['firstName']" placeholder="First name"
-              [class.input-error]="!form.controls['firstName'].valid && form.controls['firstName'].touched" required>
-
-            <span class="text-danger small" *ngIf="!form.controls['lastName'].valid && form.controls['lastName'].touched">Last name has to be betweeen 3 and 20 symbols.</span>
-            <input class="form-control" type="text" name="lastName" [formControl]="form.controls['lastName']" placeholder="Last name"
-              [class.input-error]="!form.controls['lastName'].valid && form.controls['lastName'].touched" required>
-
-            <span class="text-danger small" *ngIf="!form.controls['age'].valid && form.controls['age'].touched">You have not entered age.<br></span>
-            <input class="form-control" type="number" name="age" [formControl]="form.controls['age']" placeholder="Age" [class.input-error]="!form.controls['age'].valid && form.controls['age'].touched"
-              required>
-
-            <span class="text-danger small" *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched">You have not entered gender.<br></span>
-            <label id="gender-label" for="gender">Gender</label>
-            <select id="gender-select" class="form-control" [formControl]="form.controls['gender']" name="gender" [class.input-error]="!form.controls['gender'].valid && form.controls['gender'].touched">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="unspecified">Other</option>    
-          </select>
-            <hr>
-            <button type="submit" class="btn btn-block orange">Register</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
