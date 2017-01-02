@@ -11,10 +11,10 @@ export class FirebaseService {
     setUser(user) {
         const body = JSON.stringify(user);
 
-        return this.http.post(this.dbUrl + '/user.json', body).map(response => response.json());
+        return this.http.post(this.dbUrl + '/users.json', body).map(response => response.json());
     }
 
     getUser() {
-        return this.http.get(this.dbUrl + '/user.json').map(response => response.json());
+        return this.http.get(this.dbUrl + '/users.json').map(response => response.json());
     }
 }
