@@ -1,3 +1,4 @@
+import { TopEightPodcastsModule } from './public/top-eight-podcasts/top-eight-podcasts.module';
 import { SignupModule } from './public/signup/signup.module';
 import { AuthGuard } from './core/services/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './routes/app-routing.module';
     FooterModule,
     SearchModule,
     QuestionModule,
-    SignupModule
+    SignupModule,
+    TopEightPodcastsModule
   ],
   declarations: [
     AppComponent,
