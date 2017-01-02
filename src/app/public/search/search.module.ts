@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search.component';
 import { TruncateStringPipe } from './search.pipe';
-import { ItunesSearchService } from './search.service';
+import { SearchService } from './search.service';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import { ItunesSearchService } from './search.service';
     TruncateStringPipe
   ],
   providers: [
-    ItunesSearchService
+    SearchService
   ]
 })
 export class SearchModule { }

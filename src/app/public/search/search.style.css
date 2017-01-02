@@ -3,6 +3,10 @@
     height: 100%;
 }
 
+.popup-gallery{
+    padding: 50px;
+}
+
 /*input:focus{
     outline:none; 
 }

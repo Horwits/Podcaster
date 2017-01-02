@@ -11,12 +11,14 @@
     <div class="no-results">
         <h6 class="mdl-card__title-text">{{message}}</h6>
     </div>
-    <section class="no-padding" id="portfolio">
+    <p>{{item}}</p>
+
+    <!--<section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6" *ngFor="let item of items" >
-                    <a [href]="item.artworkUrl600" class="portfolio-box">
-                        <img [src]="item.artworkUrl600" class="img-responsive" alt="">
+                <div class="col-xs-6 col-md-3" *ngFor="let item of items">
+                    <a [href]="item.artworkUrl100" class="portfolio-box">
+                        <img [src]="item.artworkUrl100" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -24,6 +26,28 @@
                                 </div>
                                 <div class="project-name">
                                     {{item.collectionCensoredName}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-xs-6 col-md-3" *ngFor="let item of items">
+                    <a [href]="item.image" class="portfolio-box">
+                        <img [src]="item.image" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    {{item.title}}
+                                </div>
+                                <div class="project-name">
+                                    {{item.author}}
                                 </div>
                             </div>
                         </div>
