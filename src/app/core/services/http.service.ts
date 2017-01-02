@@ -16,7 +16,14 @@ export class HttpService {
 
     getResultsFromAPi(apiUrl: string) {
         return this.jsonp.request(apiUrl).map(res => {
-            console.log(res);
+            return res.json();
+        });
+    }
+
+    getByTermFromApi(apiRootUrl: string, term: string, media: string): Observable<Object> {
+        // api root url could be 'https://itunes.apple.com/search' 
+        let apiURL = `${apiRootUrl}?term=${term}&media=${media}&limit=20&callback=JSONP_CALLBACK`;
+        return this.jsonp.request(apiURL).map(res => {
             return res.json();
         });
     }
