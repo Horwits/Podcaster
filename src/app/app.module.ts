@@ -1,4 +1,4 @@
-import { SignupModule } from './signup/signup.module';
+import { SignupModule } from './public/signup/signup.module';
 import { AuthGuard } from './core/services/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { SearchComponent } from '../public/search/search.component';
 import { QuestionsListComponent } from '../public/question/questions-list/questions-list.component';
 import { HomeMainComponent } from '../public/home/home-main/home-main.component';
-import { SignupComponent } from '../signup/signup.component';
+import { SignupComponent } from '../public/signup/signup.component';
+import { AboutComponent } from '../public/footer/footer-about/about.component';
 
 import { AuthService } from '../core/services/auth.service';
 import { AuthGuard } from '../core/services/auth-guard.service';
@@ -33,6 +34,10 @@ const appRoutes: Routes = [
     {
         path: 'signup',
         component: SignupComponent
+    },
+    {
+        path: 'about',
+        component: AboutComponent
     }
 ];
 
