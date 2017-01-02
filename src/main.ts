@@ -13,5 +13,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic([ItunesSearchService, JsonpModule]).bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule);
 /*platformBrowserDynamic();*/

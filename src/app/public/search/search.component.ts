@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ItunesSearchService } from './search.service';
 import { Observable } from 'rxjs/Observable';
@@ -9,25 +9,35 @@ import { Observable } from 'rxjs/Observable';
     styleUrls: ['./search.style.css']
 })
 
-export class SearchComponent {
-    items: Array<Object>;
-    message: String;
+export class SearchComponent implements OnInit {
+    private items: Array<Object>;
+    private errorMessage: string;
 
-    constructor(private itunesService: ItunesSearchService) {
+    searchTerm: string;
+
+    constructor(private http: Http, private itunesService: ItunesSearchService) {
     }
     // Initiate search based on input value
-    initSearch(value) {
-        this.itunesService.getResults(value).map(result => {
-            // Clear previous items
-            this.items = null;
-            this.message = null;
-            if (result.values.length > 0) {
-                for (let item of result) {
-                    this.items = value;
-                }
-            } else {
-                this.message = 'No results for \"' + value + '\"';
-            }
-        });
+    ngOnInit() {
+        this.getAll();
     }
+    private getAll() {
+        let result;
+
+        this.itunesService.getResults()
+            .subscribe(
+            (response) => {
+                console.log(response);
+                result = response;
+                this.items = result.results.slice(0, 6); // this should be done with a pipe
+            }
+            ,
+            error => this.errorMessage = error
+            );
+    }
+
+    /*onSearch(searchTerm) {
+        let res = this.items.find(x => x[searchTerm] === this.searchTerm);
+        console.log(res);
+    }*/
 }

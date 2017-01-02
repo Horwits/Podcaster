@@ -1,39 +1,34 @@
 <section class="page-content">
-    <form class="app-search-form">
+    <!--<form class="app-search-form">
         <div class="mdl-textfield">
             <input required class="mdl-textfield__input" type="text" id="searchTerm" autocomplete="off" #searchInput>
         </div>
-        <button (click)="initSearch(searchInput.value)" class="mdl-button mdl-button--raised mdl-button--accent">
+        <button (click)="onSearch(searchInput.value)" class="mdl-button mdl-button--raised mdl-button--accent">
         Search
     </button>
-    </form>
-
+    </form>-->
+    <h1>This is not the search component - this is the rendering of a search and subscriptions component basic idea</h1>
     <div class="no-results">
         <h6 class="mdl-card__title-text">{{message}}</h6>
     </div>
-
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp" *ngFor="let item of items">
-            <div class="mdl-card__title">
-                <h6 class="mdl-card__title-text">{{item.trackName | truncate}}</h6>
-            </div>
-
-            <!--<div class="mdl-card__media">
-            <img src="{{item.artworkUrl60}}" width="60" height="60" border="0" alt="">
-        </div>-->
-
-            <div class="mdl-card__supporting-text">
-                <h6>{{item.formattedPrice}}</h6>
-                Seller: {{item.sellerName}}<br> Genre: {{item.primaryGenreName}}<br> Avg Rating: {{item.averageUserRating}}
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a *ngIf="item.trackViewUrl" [href]="item.trackViewUrl" class="mdl-button mdl-button--colored" target="_blank">
-                App Store
-            </a>
-                <a *ngIf="item.sellerUrl" [href]="item.sellerUrl" class="mdl-button mdl-button--colored" target="_blank">
-                Website
-            </a>
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6" *ngFor="let item of items" >
+                    <a [href]="item.artworkUrl600" class="portfolio-box">
+                        <img [src]="item.artworkUrl600" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    {{item.primaryGenreName}}
+                                </div>
+                                <div class="project-name">
+                                    {{item.collectionCensoredName}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>

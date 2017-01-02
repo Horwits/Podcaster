@@ -2,7 +2,7 @@
     'use strict'; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function (event) {
+    /*$('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -14,7 +14,7 @@
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
-    });
+    });*/
 
     $(document).ready(function () {
         let topOfMain = $('#main-content').offset().top,
@@ -56,14 +56,14 @@
     });
 
     // Offset for Main Navigation
-    $('#mainNav').affix({
+    /*$('#mainNav').affix({
         offset: {
             top: 100
         }
-    })
+    })*/
 
     // Initialize and Configure Scroll Reveal Animation
-    window.sr = ScrollReveal();
+   /* window.sr = ScrollReveal();
     sr.reveal('.sr-icons', {
         duration: 600,
         scale: 0.3,
@@ -77,10 +77,10 @@
         duration: 600,
         scale: 0.3,
         distance: '0px'
-    }, 300);
+    }, 300);*/
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
-    $('.popup-gallery').magnificPopup({
+    /*$('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
         tLoading: 'Loading image #%curr%...',
@@ -94,5 +94,5 @@
             tError: '<a href=' % url % '>The image #%curr%</a> could not be loaded.'
         }
     });
-
+*/
 })(jQuery); // End of use strict
