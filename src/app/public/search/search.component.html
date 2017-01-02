@@ -1,18 +1,17 @@
 <section class="page-content">
-    <form class="app-search-form">
-        <div class="mdl-textfield">
-            <input required class="mdl-textfield__input" type="text" id="searchTerm" autocomplete="off" #searchInput>
+    <div class="container text-center">
+        <div class="call-to-action">
+            <input class="form-control" #term (keyup.enter)="onSearch(term.value)" (blur)="onSearch(term.value); term.value='' ">
+            <hr>
+            <button class="btn btn-default btn-xl sr-button" (click)=onSearch(term.value)>Search</button>
         </div>
-        <button (click)="onSearch(searchInput.value)" class="mdl-button mdl-button--raised mdl-button--accent">
-        Search
-    </button>
-    </form>
-    
+    </div>
+
     <div class="no-results">
         <h6 class="mdl-card__title-text">{{message}}</h6>
     </div>
-    <p>{{item}}</p>
-    <section class="no-padding" id="portfolio">
+
+    <section id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-xs-6 col-md-3" *ngFor="let item of items">
