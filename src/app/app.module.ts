@@ -11,18 +11,22 @@ import { FooterModule } from './public/footer/footer.module';
 import { SearchModule } from './public/search/search.module';
 import { QuestionModule } from './public/question/question.module';
 import { HomeModule } from './public/home/home.module';
-import { LoginModule } from './public/login/login.module';
+import { LoginModule } from './public/signin/signin.module';
 import { TopEightPodcastsModule } from './public/top-eight-podcasts/top-eight-podcasts.module';
 import { SignupModule } from './public/signup/signup.module';
 import { ProfileModule } from './public/signup/profile/profile.module';
 
 import { AuthGuard } from './core/services/auth-guard.service';
+import { AuthService } from './core/services/auth.service';
 
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './routes/app-routing.module';
 
 @NgModule({
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -42,11 +46,8 @@ import { AppRoutingModule } from './routes/app-routing.module';
 
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  declarations: [
-    AppComponent,
-  ],
   providers: [
-    AuthGuard
+    AuthGuard, AuthService
   ],
   bootstrap: [AppComponent]
 })

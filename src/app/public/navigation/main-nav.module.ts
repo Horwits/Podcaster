@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavPublicComponent } from './nav-public/nav-public.component';
-import { NavPrivateComponent } from '../../private/navigation/nav-private/nav-private.component';
+import { NavigationComponent } from './navigation.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   exports: [
-      NavPublicComponent,
-      NavPrivateComponent,
+    NavigationComponent
   ],
-  declarations: [NavPublicComponent, NavPrivateComponent]
+  declarations: [NavigationComponent]
 })
 export class MainNavModule { }

@@ -30,8 +30,8 @@ export class AuthGuard implements CanActivate, CanActivateChild {
         // Store the attempted URL for redirecting
         this.authService.redirectUrl = url;
 
-        // Navigate to the login page with extras
-        this.router.navigate(['/log-in']);
+        // Navigate to the signin page with extras
+        this.router.navigate(['/signin']);
         return false;
     }
 }

@@ -1,0 +1,34 @@
+<section>
+  <!--<input class="form-control" #term (keyup.enter)="onGetUserByUserName(term.value)" (blur)="onGetUserByUserName(term.value); term.value='' ">
+  <hr>
+  <button class="btn btn-default btn-xl sr-button" (click)=onGetUserByUserName(term.value)>Search</button>-->
+
+  <button (click)="ongetUsers()" class="btn btn-block orange">Get</button>
+  <ul>
+    <li class="text" *ngFor="let user of users | async">
+      {{user.$key}} : {{user.$value}}
+    </li>
+  </ul>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSignIn()">
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email">
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" id="password">
+    </div>
+   <!-- <div class="input-group">
+      <label for="firstName">FirstName</label>
+      <input type="text" formControlName="firstName" id="firstName">
+    </div>
+    <div class="input-group">
+      <label for="lastName">LastName</label>
+      <input type="text" formControlName="lastName" id="lastName">
+    </div>-->
+    <button type="submit">Sign in</button>
+  </form>
+</section>
+
+<!---->

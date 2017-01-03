@@ -7,7 +7,7 @@
           <hr>
         </div>
         <div class="card-content">
-          <form [formGroup]="form" (ngSubmit)="submit(form.value);">
+          <form [formGroup]="form" (ngSubmit)="onSignUp(form.value);">
             <span class="text-danger small" *ngIf="!form.controls['username'].valid && form.controls['username'].touched">Username has to be betweeen 6 and 15 symbols.</span>
             <input class="form-control" [class.input-error]="!form.controls['username'].valid && form.controls['username'].touched" type="text"
               name="username" [formControl]="form.controls['username']" placeholder="Username" required>
