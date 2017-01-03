@@ -1,5 +1,7 @@
-import { FirebaseService } from '../../core/services/firebase.service';
+import { FirebaseService } from '../../core/services/database.service';
 import { Component, OnInit } from '@angular/core';
+
+import { FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-login',
@@ -8,29 +10,31 @@ import { Component, OnInit } from '@angular/core';
   providers: [FirebaseService]
 })
 export class LoginComponent implements OnInit {
-  response;
-  constructor(private firebaseService: FirebaseService) { }
+  users: FirebaseListObservable<any[]>;
+  constructor(private databaseService: FirebaseService) { }
 
   ngOnInit() {
   }
   ongetUsers() {
-    this.firebaseService.getUsers()
+    this.users = this.databaseService.getUsers();
+    console.log(this.users);
+    /*
       .subscribe(
       user => {
         this.response = JSON.stringify(user);
       },
       error => console.log(error)
-      );
+      );*/
   }
 
-  onGetUserByUserName(userName) {
-    this.firebaseService.getByUserName(userName)
+  /*onGetUserByUserName(userName) {
+    this.databaseService.getByUserName(userName)
       .subscribe(users => {
-        console.log(users as Array<Object>);
-        /*let user = users(x => x.userName === userName);
-        console.log(user);*/  
-    },
-  error => console.log(error)
+        console.log(users);
+        let user = users(x => x.userName === userName);
+        console.log(user);
+      },
+      error => console.log(error)
       );
-}
+  }*/
 }

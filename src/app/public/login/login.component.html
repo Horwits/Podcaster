@@ -1,8 +1,12 @@
 <section>
-  <input class="form-control" #term (keyup.enter)="onGetUserByUserName(term.value)" (blur)="onGetUserByUserName(term.value); term.value='' ">
+  <!--<input class="form-control" #term (keyup.enter)="onGetUserByUserName(term.value)" (blur)="onGetUserByUserName(term.value); term.value='' ">
   <hr>
-  <button class="btn btn-default btn-xl sr-button" (click)=onGetUserByUserName(term.value)>Search</button>
+  <button class="btn btn-default btn-xl sr-button" (click)=onGetUserByUserName(term.value)>Search</button>-->
 
   <button (click)="ongetUsers()" class="btn btn-block orange">Get</button>
-  <div>{{response}}</div>
+  <ul>
+    <li class="text" *ngFor="let user of users | async">
+      {{user.$key}} : {{user.$value}}
+    </li>
+  </ul>
 </section>
