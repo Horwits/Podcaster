@@ -1,3 +1,4 @@
+import { ProfileComponent } from '../public/signup/profile/profile.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -10,7 +11,7 @@ import { AboutComponent } from '../public/footer/footer-about/about.component';
 import { SignInComponent } from '../public/signin/signin.component';
 import { TopEightComponent } from '../public/top-eight-podcasts/top-eight.component';
 
-import {AuthGuard} from '../core/services/auth-guard.service';
+import { AuthGuard } from '../core/services/auth-guard.service';
 
 const appRoutes: Routes = [
     // Add the redirect
@@ -28,6 +29,30 @@ const appRoutes: Routes = [
         path: 'search',
         component: SearchComponent,
         canActivate: [AuthGuard]
+    }/*, {
+        path: 'subscriptions',
+        component: SubscriptionsComponent,
+        canActivate: [AuthGuard]
+    }, {
+        path: 'downloads',
+        component: DownloadsComponent,
+        canActivate: [AuthGuard]
+    }, {
+        path: 'favoritest',
+        component: FavoritestComponent,
+        canActivate: [AuthGuard]
+    }, {
+        path: 'unplayed',
+        component: UnplayedComponent,
+        canActivate: [AuthGuard]
+    }, {
+        path: 'playing',
+        component: PlayingComponent,
+        canActivate: [AuthGuard]
+    }, */{
+        path: 'profile',
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'questions',
@@ -41,7 +66,7 @@ const appRoutes: Routes = [
         path: 'signup',
         component: SignupComponent
     },
-     {
+    {
         path: 'signin',
         component: SignInComponent
     },

@@ -12,10 +12,28 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="/top-eight">Top 8</a>
+                    <a class="page-scroll" href="/subscriptions" *ngIf="isAuth()">Subscriptions</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/search" ng-if="isAuth()">Search</a>
+                    <a class="page-scroll" href="/downloads" *ngIf="isAuth()">Downloads</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/favoritest" *ngIf="isAuth()">Favorites</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/unplayed" *ngIf="isAuth()">Unplayed</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/playing" *ngIf="isAuth()">Playing</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/search" *ngIf="isAuth()">Search</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/profile" *ngIf="isAuth()">Profile</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="/top-eight">Top 8</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="/questions">Questions</a>
