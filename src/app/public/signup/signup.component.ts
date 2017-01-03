@@ -1,6 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { FirebaseService } from '../../core/services/firebase.service';
+import { FirebaseService } from '../../core/services/database.service';
 @Injectable()
 @Component({
     selector: 'app-register',
@@ -28,27 +28,22 @@ export class SignupComponent implements OnInit {
         });
     }
 
-    setUser() {
-        this.firebaseService.setUser(this.form)
-            .subscribe(
-            user => {
-                this.response = JSON.stringify(user);
-                console.log(this.response);
-            },
-            error => console.log(error)
-            );
-    }
+    /*setUser() {
+        this.firebaseService.setUser(this.form);
+    }*/
 
     submit(value: any) {
         console.log(value);
-        this.firebaseService.setUser(value)
+        let user = JSON.stringify(value);
+        this.firebaseService.setUser(user);
+       /* this.firebaseService.setUser(value)
             .subscribe(
             user => {
                 this.response = JSON.stringify(user);
                 console.log(this.response);
             },
             error => console.log(error)
-            );
+            );*/
 		/*this.authService.register(this.form.value)
 			.subscribe(res => {
 				console.log(res);
