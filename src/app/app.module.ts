@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import {AngularFireModule} from 'angularfire2';
+import {firebaseConfig} from '../environments/firebase.config';
+
 import { MainNavModule } from './public/navigation/main-nav.module';
 import { FooterModule } from './public/footer/footer.module';
 import { SearchModule } from './public/search/search.module';
@@ -25,7 +28,6 @@ import { AppRoutingModule } from './routes/app-routing.module';
     FormsModule,
     HttpModule,
     JsonpModule,
-
     AppRoutingModule,
 
     MainNavModule,
@@ -36,7 +38,9 @@ import { AppRoutingModule } from './routes/app-routing.module';
     SignupModule,
     ProfileModule,
     TopEightPodcastsModule,
-    LoginModule
+    LoginModule,
+
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   declarations: [
     AppComponent,
