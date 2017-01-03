@@ -1,4 +1,9 @@
-import { ProfileComponent } from '../public/signup/profile/profile.component';
+import { ProfileComponent } from '../private/profile/profile.component';
+import { PlayingComponent } from '../private/playing/playing.component';
+import { UnplayedComponent } from '../private/unplayed/unplayed.component';
+import { FavoritesComponent } from '../private/favorites/favorites.component';
+import { DownloadsComponent } from '../private/downloads/downloads.component';
+import { SubscriptionsComponent } from '../private/subscriptions/subscriptions.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -29,7 +34,7 @@ const appRoutes: Routes = [
         path: 'search',
         component: SearchComponent,
         canActivate: [AuthGuard]
-    }/*, {
+    }, {
         path: 'subscriptions',
         component: SubscriptionsComponent,
         canActivate: [AuthGuard]
@@ -39,7 +44,7 @@ const appRoutes: Routes = [
         canActivate: [AuthGuard]
     }, {
         path: 'favoritest',
-        component: FavoritestComponent,
+        component: FavoritesComponent,
         canActivate: [AuthGuard]
     }, {
         path: 'unplayed',
@@ -53,7 +58,7 @@ const appRoutes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         canActivate: [AuthGuard]
-    }*/,
+    },
     {
         path: 'questions',
         component: QuestionsListComponent

@@ -1,3 +1,9 @@
+import { UnplayedModule } from './private/unplayed/unplayed.module';
+import { PlayingModule } from './private/playing/playing.module';
+import { DownloadsModule } from './private/downloads/downloads.module';
+import { FavoritesModule } from './private/favorites/favorites.module';
+import { SubscriptionsModule } from './private/subscriptions/subscriptions.module';
+import { ProfileModule } from './private/profile/profile.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +20,6 @@ import { HomeModule } from './public/home/home.module';
 import { LoginModule } from './public/signin/signin.module';
 import { TopEightPodcastsModule } from './public/top-eight-podcasts/top-eight-podcasts.module';
 import { SignupModule } from './public/signup/signup.module';
-import { ProfileModule } from './public/signup/profile/profile.module';
 
 import { AuthGuard } from './core/services/auth-guard.service';
 import { AuthService } from './core/services/auth.service';
@@ -40,9 +45,15 @@ import { AppRoutingModule } from './routes/app-routing.module';
     SearchModule,
     QuestionModule,
     SignupModule,
-    ProfileModule,
     TopEightPodcastsModule,
     LoginModule,
+
+    ProfileModule,
+    SubscriptionsModule,
+    FavoritesModule,
+    DownloadsModule,
+    PlayingModule,
+    UnplayedModule,
 
     AngularFireModule.initializeApp(firebaseConfig)
   ],
