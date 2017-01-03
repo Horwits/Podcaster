@@ -49,11 +49,11 @@ const appRoutes: Routes = [
         path: 'playing',
         component: PlayingComponent,
         canActivate: [AuthGuard]
-    }, */{
+    }, {
         path: 'profile',
         component: ProfileComponent,
         canActivate: [AuthGuard]
-    },
+    }*/,
     {
         path: 'questions',
         component: QuestionsListComponent
